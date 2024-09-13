@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/bootstrap.bundle.min.js" defer></script>
+    <title>BEM Fahutan 2024</title>
+  </head>
+  <body>
+    <nav class="py-2">
+      <ul class="nav nav-underline justify-content-center align-items-center">
+        <li class="nav-item">
+          <a class="nav-link" href="#berita">Berita</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <img src="assets/icon.png" alt="Logo" width="28" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#proker">Proker</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" style="height: 75vh">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <img
+            src="assets/img/arun.png"
+            class="img-fluid object-fit-cover h-100 w-100"
+            alt="..."
+            style="filter: brightness(0.5)"
+          />
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
+            style="top: 0"
+          >
+            <h1 class="fw-bold">RiwaHub</h1>
+            <p class="m-0">
+              Some representative placeholder content for the first slide. Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Molestias culpa pariatur deleniti provident
+              accusantium natus repellat, illo dolorem fuga repellendus.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item h-100">
+          <img
+            src="assets/img/forest2.jpg"
+            class="img-fluid object-fit-cover h-100 w-100"
+            alt="..."
+            style="filter: brightness(0.5)"
+          />
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
+            style="top: 0"
+          >
+            <h1 class="fw-bold">RIMBANAWA</h1>
+            <p class="m-0">Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item h-100">
+          <img
+            src="assets/img/embed.png"
+            class="img-fluid object-fit-cover h-100 w-100"
+            alt="..."
+            style="filter: brightness(0.5)"
+          />
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
+            style="top: 0"
+          >
+            <h1 class="fw-bold">Third slide label</h1>
+            <p class="m-0">Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item h-100">
+          <img
+            src="assets/img/forest2.jpg"
+            class="img-fluid object-fit-cover h-100 w-100"
+            alt="..."
+            style="filter: brightness(0.5)"
+          />
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
+            style="top: 0"
+          >
+            <h1 class="fw-bold">Fourth slide label</h1>
+            <p class="m-0">
+              Some representative placeholder content for the fourth slide. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Aliquid, vel!
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- <header 
+    class="py-3" 
+    style="background: url(assets/hero-bg.svg); background-repeat: no-repeat; background-size: cover;"
+  >
+    <div class="container" style="height: 70vh;">
+      <div class="row h-100 align-items-center justify-content-center">
+        <div class="col text-center">
+          <img src="assets/hero-sm.png" alt="RIMBANAWA" class="w-100 img-fluid d-md-none" />
+          <img src="assets/hero-md.png" alt="RIMBANAWA" class="img-fluid d-none d-md-block" />
+          <h3 class="m-0 mt-2">BEM Fahutan IPB 2024</h3>
+          <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Hubungi Kami
+          </button>
+        </div>
+      </div>
+    </div>
+  </header> -->
+
+    <div style="height: 50px"></div>
+
+    <section
+      class="pt-3"
+      style="
+        padding-bottom: calc(1rem + 50px);
+        background-image: url(assets/contour1.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left top;
+      "
+    >
+      <div class="container py-3" id="berita">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">
+              Berita
+            </h1>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest1.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Judul Berita</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Kemahasiswaan</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest2.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Judul Berita</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Akademik</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest1.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Judul Berita</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Akademik</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest2.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Judul Berita</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Akademik</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest1.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Judul Berita</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Akademik</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="height: 50px"></div>
+
+    <section
+      class="pt-3"
+      style="
+        padding-bottom: calc(1rem + 100px);
+        background-image: url(assets/contourbot.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right bottom;
+      "
+    >
+      <div class="container" id="proker">
+        <div class="row">
+          <div class="col text-center">
+            <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">
+              Program Kerja
+            </h1>
+          </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest2.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Proker ABC</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Adkesmah</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest1.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Proker ABC</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Adkesmah</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a href="#" target="_blank">
+              <div class="card text-bg-dark">
+                <img
+                  src="assets/img/forest2.jpg"
+                  class="card-img img-fluid object-fit-cover"
+                  alt="..."
+                  style="height: 250px !important; filter: brightness(0.4)"
+                />
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">Proker ABC</h5>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.
+                  </p>
+                  <p class="card-text"><small>Adkesmah</small></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="container-fluid bg-secondary"
+      id="callcenter"
+      style="height: 350px; padding-top: 50px; padding-bottom: 50px"
+    >
+      <div
+        class="row h-100 justify-content-center align-items-center"
+        style="
+          background-image: url(assets/cta-bg.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        "
+      >
+        <div class="col text-center">
+          <h1 class="fw-bold text-primary">Kami di sini untuk mendengarkan</h1>
+          <p>BEM Fahutan siap mendengar keluh kesahmu</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="container-fluid bg-primary text-white"
+      style="height: 400px; padding-top: 50px; padding-bottom: 50px"
+    >
+      <div
+        class="row h-100 align-items-center"
+        style="
+          background-image: url(assets/footer-bg.svg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        "
+      >
+        <div class="col text-center">
+          <h5 class="fw-bold">BEM Fahutan IPB 2024</h5>
+          <div class="d-flex flex-wrap justify-content-center g-4">
+            <a
+              href="https://instagram.com/bemfahutanipb"
+              target="_blank"
+              class="btn btn-link text-secondary"
+              >Instagram</a
+            >
+            <a
+              href="https://twitter.com/bemfahutanipb"
+              target="_blank"
+              class="btn btn-link text-secondary"
+              >Twitter</a
+            >
+            <a
+              href="https://youtube.com/@bemfahutanipb2023"
+              target="_blank"
+              class="btn btn-link text-secondary"
+              >Youtube</a
+            >
+            <a
+              href="https://www.tiktok.com/@bemfahutanipb"
+              target="_blank"
+              class="btn btn-link text-secondary"
+              >Tiktok</a
+            >
+            <a
+              href="https://open.spotify.com/show/0oks7v2NAz2W7ddqIOZfSO?si=Y3Owk5lHQs2JsiYYoCj8Sw"
+              target="_blank"
+              class="btn btn-link text-secondary"
+              >Spotify</a
+            >
+          </div>
+          <p class="mb-0 mt-3 opacity-50">
+            Developed by
+            <a href="https://codepanda.id" target="_blank" class="text-white">Codepanda</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Fahutan Help Center</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="mailto:example@gmail.com" method="GET" enctype="text/plain">
+              <div class="mb-3">
+                <label for="inputBody" class="form-label">Pesan untuk kami</label>
+                <textarea
+                  class="form-control"
+                  name="body"
+                  id="inputBody"
+                  rows="6"
+                  placeholder="Sampaikan pesanmu"
+                ></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Kirim</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
