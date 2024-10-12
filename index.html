@@ -433,26 +433,55 @@
             margin-top: 50px;
         }
 
+        /* Style untuk tulisan yang tidak berbentuk link */
+        h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Style khusus untuk tombol download, tanpa mengganggu elemen lain */
         .download-icon {
-            display: inline-block;
-            padding: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 30px;
             background-color: #4CAF50;
-            border-radius: 50px; /* Ubah ke kotak dengan sudut sedikit melengkung */
             color: white;
-            font-size: 24px;
+            font-size: 20px; /* Ukuran font di dalam tombol, tidak memengaruhi yang lain */
             cursor: pointer;
             text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid #4CAF50;
         }
 
         .download-icon:hover {
             background-color: #45a049;
         }
+
+        /* Style khusus untuk ikon di dalam tombol download */
+        .download-icon span {
+            margin-right: 8px;
+        }
+
+        /* Font style dalam tombol khusus (tidak mempengaruhi seluruh halaman) */
+        .download-icon {
+            font-family: 'Verdana', sans-serif; /* Atur font khusus untuk tombol ini */
+        }
     </style>
 </head>
 <body>
 
+    <!-- Bagian ini adalah teks biasa, bukan link -->
+    <p>Silakan klik tombol di bawah ini untuk mengunduh file.</p>
+
+    <!-- Bagian ini adalah tombol download dengan ikon di tengah -->
     <a class="download-icon" href="https://drive.google.com/uc?export=download&id=FILE_ID" download>
-        Download
+        <span></span> Download
     </a>
                   </p>
                   <p class="card-text"><small>‎ </small></p>
