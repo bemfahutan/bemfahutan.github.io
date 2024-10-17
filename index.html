@@ -14,22 +14,36 @@
         }
     </style>
     <style>
+  /* Pastikan style teks tidak berubah */
+  .original-text {
+    color: inherit;       /* Tetap menggunakan warna default */
+    font-size: inherit;   /* Tidak mengubah ukuran teks */
+    font-family: inherit; /* Menggunakan font default */
+  }
+
+  .fw-bold {
+    font-weight: bold;    /* Menjaga teks KONVERSI SKS tetap bold */
+  }
+
+  /* Style untuk tombol download */
   .download-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;  
-    border-radius: 50px; 
-    font-size: 16px;     
+    padding: 15px 30px;   /* Ukuran tombol */
+    border-radius: 50px;  /* Membuat tombol menjadi oval */
+    font-size: 16px;      /* Ukuran teks tombol */
     text-align: center;
-    background-color: #28a745; 
-    color: white;        
-    text-decoration: none; 
+    background-color: #28a745; /* Warna hijau */
+    color: white;         /* Warna teks putih */
+    text-decoration: none; /* Hilangkan garis bawah pada teks */
+    font-weight: bold;    /* Membuat teks pada tombol bold */
   }
 
   .download-btn:hover {
-    background-color: #218838;
+    background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
   }
 
+  /* Pusatkan semua elemen dalam card-img-overlay */
   .card-img-overlay {
     text-align: center;
   }
@@ -347,12 +361,14 @@
                   style="height: 250px !important; filter: brightness(0.4)"
                 />
                 <div class="card-img-overlay text-center"> 
-  <h5 class="card-title fw-bold">KONVERSI SKS</h5>
-  <p class="card-text">
+  <div class="card-img-overlay text-center"> 
+  <h5 class="card-title original-text fw-bold">KONVERSI SKS</h5>
+  <p class="card-text original-text">
     Menyajikan Tata Cara Konversi SKS.
   </p>
   <p class="card-text"><small>‎ </small></p>
-                  
+
+  <!-- Tombol download dengan background hijau dan teks bold -->
   <a href="file-konversi-sks.pdf" download class="btn download-btn">Download</a>
 </div>
           <div class="col">
