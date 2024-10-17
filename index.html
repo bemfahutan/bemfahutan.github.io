@@ -15,11 +15,10 @@
     </style>
     
   <style>
-  /* Gaya untuk teks tetap normal, tidak terpengaruh oleh tombol */
+  /* Gaya untuk teks agar tetap seperti semula */
   .card-title, .card-text {
-    color: inherit;         /* Warna teks mengikuti warna default */
-    font-size: inherit;     /* Ukuran teks tetap seperti semula */
-    font-family: inherit;   /* Font tetap sama */
+    color: black;         /* Pastikan teks tetap hitam */
+    font-weight: inherit; /* Ikuti gaya font aslinya */
   }
 
   /* Style untuk tombol download */
@@ -40,9 +39,11 @@
     background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
   }
 
-  /* Pusatkan konten di dalam card-img-overlay */
+  /* Pastikan elemen di dalam card-img-overlay tidak mengubah layout kolom lainnya */
   .card-img-overlay {
-    text-align: center; /* Pusatkan semua elemen dalam div ini */
+    display: flex;
+    flex-direction: column; /* Pastikan elemen diatur dalam kolom */
+    align-items: center;    /* Pusatkan semua elemen di tengah */
   }
 </style>
     
