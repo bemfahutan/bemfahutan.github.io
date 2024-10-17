@@ -15,17 +15,18 @@
     </style>
     <style>
   /* Pastikan style teks tidak berubah */
-  .original-text {
-    color: inherit;       /* Tetap menggunakan warna default */
-    font-size: inherit;   /* Tidak mengubah ukuran teks */
-    font-family: inherit; /* Menggunakan font default */
+  .card-title {
+    font-weight: bold;  /* Menjaga teks KONVERSI SKS tetap bold */
+    color: inherit;     /* Warna teks tidak berubah */
   }
 
-  .fw-bold {
-    font-weight: bold;    /* Menjaga teks KONVERSI SKS tetap bold */
+  .card-text {
+    color: inherit;     /* Warna teks tidak berubah */
+    font-size: inherit; /* Ukuran teks tetap sama */
+    font-family: inherit; /* Font tetap seperti semula */
   }
 
-  /* Style untuk tombol download */
+  /* Style khusus untuk tombol download */
   .download-btn {
     display: inline-block;
     margin-top: 20px;
@@ -43,8 +44,11 @@
     background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
   }
 
-  /* Pusatkan semua elemen dalam card-img-overlay */
+  /* Pusatkan semua elemen dalam card-img-overlay dan tetap horizontal */
   .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Semua elemen di tengah secara horizontal */
     text-align: center;
   }
 </style>
@@ -360,17 +364,19 @@
                   alt="..."
                   style="height: 250px !important; filter: brightness(0.4)"
                 />
-                <div class="card-img-overlay text-center"> 
-  <div class="card-img-overlay text-center"> 
-  <h5 class="card-title original-text fw-bold">KONVERSI SKS</h5>
-  <p class="card-text original-text">
-    Menyajikan Tata Cara Konversi SKS.
-  </p>
-  <p class="card-text"><small>‎ </small></p>
+                <div class="card-img-overlay">
+                  <h5 class="card-title fw-bold">KONVERSI SKS</h5>
+                  <p class="card-text">
+                    Menyajikan Tata Cara Konversi SKS. 
+                  </p>
+                  <p class="card-text"><small>‎ </small></p>
+                  <!-- Tombol download dengan background hijau dan teks bold -->
+      <a href="file-konversi-sks.pdf" download class="download-btn">Download
+                </div>
+              </div>
+            </a>
+          </div>
 
-  <!-- Tombol download dengan background hijau dan teks bold -->
-  <a href="file-konversi-sks.pdf" download class="btn download-btn">Download</a>
-</div>
           <div class="col">
             <a href="#" target="_blank">
               <div class="card text-bg-dark">
