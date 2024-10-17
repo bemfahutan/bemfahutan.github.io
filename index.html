@@ -14,7 +14,6 @@
         }
     </style>
   
-    
   </head>
   <body>
     <nav class="py-2">
@@ -308,61 +307,115 @@
         background-size: contain;
         background-position: right bottom;
       "
-    >
-      <div class="container" id="proker">
-        <div class="row">
-          <div class="col text-center">
-            <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">
-              HELP CENTER
-            </h1>
+   <div class="container" id="proker">
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">
+        HELP CENTER
+      </h1>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
+    
+    <div class="col">
+      <a href="#" target="_blank">
+        <div class="card text-bg-dark">
+          <img
+            src="assets/img/forest1.jpg"
+            class="card-img img-fluid object-fit-cover"
+            alt="..."
+            style="height: 250px !important; filter: brightness(0.4)"
+          />
+          <div class="card-img-overlay">
+            <h5 class="card-title fw-bold">KONVERSI SKS</h5>
+            <p class="card-text">
+              Menyajikan Tata Cara Konversi SKS. 
+            </p>
+            <p class="card-text"><small>‎ </small></p>
+            <!-- Tombol Download untuk KONVERSI SKS -->
+            <div class="text-center">
+              <a href="file-konversi-sks.pdf" download class="btn download-btn">Download</a>
+            </div>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
-          <div class="col">
-            <a href="#" target="_blank">
-              <div class="card text-bg-dark">
-                <img
-                  src="assets/img/forest1.jpg"
-                  class="card-img img-fluid object-fit-cover"
-                  alt="..."
-                  style="height: 250px !important; filter: brightness(0.4)"
-                />
-                <div class="card-img-overlay">
-  <h5 class="card-title fw-bold">KONVERSI SKS</h5> <!-- Teks tetap bold -->
-  <p class="card-text">
-    Menyajikan Tata Cara Konversi SKS. 
-  </p>
-  <p class="card-text"><small>‎ </small></p>
+      </a>
+    </div>
 
-  <!-- Tombol download dengan latar belakang hijau dan berbentuk bulat -->
-  <div class="text-center"> <!-- Menjaga tombol tetap di tengah -->
-    <a href="file-konversi-sks.pdf" download class="btn download-btn">Download</a>
+    <div class="col">
+      <a href="#" target="_blank">
+        <div class="card text-bg-dark">
+          <img
+            src="assets/img/forest1.jpg"
+            class="card-img img-fluid object-fit-cover"
+            alt="..."
+            style="height: 250px !important; filter: brightness(0.4)"
+          />
+          <div class="card-img-overlay">
+            <h5 class="card-title fw-bold">PANDUAN SARJANA</h5>
+            <p class="card-text">
+              Menyajikan Buku Panduan Sarjana Mahasiswa Edisi ke-4
+            </p>
+            <p class="card-text"><small>‎ </small></p>
+            <!-- Tombol Download untuk PANDUAN SARJANA -->
+            <div class="text-center">
+              <a href="file-panduan-sarjana.pdf" download class="btn download-btn">Download</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col">
+      <a href="#" target="_blank">
+        <div class="card text-bg-dark">
+          <img
+            src="assets/img/forest1.jpg"
+            class="card-img img-fluid object-fit-cover"
+            alt="..."
+            style="height: 250px !important; filter: brightness(0.4)"
+          />
+          <div class="card-img-overlay">
+            <h5 class="card-title fw-bold">PENGADUAN</h5>
+            <p class="card-text">
+              Memberi Fasilitas Pengaduan untuk kesejahteraan Mahasiswa FAHUTAN
+            </p>
+            <p class="card-text"><small>‎ </small></p>
+            <!-- Tombol Download untuk PENGADUAN -->
+            <div class="text-center">
+              <a href="file-pengaduan.pdf" download class="btn download-btn">Download</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
   </div>
 </div>
 
 <style>
-  /* Gaya untuk memastikan teks tetap tidak berubah */
-  .card-title, .card-text {
-    color: black;         /* Pastikan teks tetap hitam */
-    font-weight: inherit; /* Mengikuti gaya font aslinya */
-  }
-
-  /* Style untuk tombol download */
+  /* Gaya untuk tombol download */
   .download-btn {
     display: inline-block;
     margin-top: 20px;      /* Jarak antara teks dan tombol */
-    padding: 15px 30px;    /* Ukuran tombol */
-    border-radius: 50px;   /* Membuat tombol menjadi oval */
-    font-size: 16px;       /* Ukuran teks tombol */
+    padding: 10px 20px;    /* Ukuran tombol */
+    border-radius: 25px;   /* Membuat tombol menjadi oval */
+    font-size: 16px;        /* Ukuran teks tombol */
     text-align: center;     /* Pusatkan teks dalam tombol */
     background-color: #28a745; /* Warna hijau */
-    color: white;          /* Warna teks putih */
-    text-decoration: none;  /* Hilangkan garis bawah pada teks */
-    font-weight: bold;     /* Membuat teks pada tombol bold */
+    color: white;           /* Warna teks putih */
+    text-decoration: none;   /* Hilangkan garis bawah pada teks tombol */
+    font-weight: bold;      /* Membuat teks pada tombol bold */
   }
 
   .download-btn:hover {
     background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
+  }
+
+  /* Pastikan teks di dalam card tetap hitam dan tidak memiliki garis bawah */
+  .card-title, .card-text {
+    color: black;           /* Pastikan teks tetap hitam */
+    text-decoration: none;  /* Menghilangkan garis bawah pada teks */
+    margin-bottom: 0;      /* Menghilangkan margin bawah jika ada */
   }
 
   /* Pusatkan tombol download */
@@ -371,47 +424,6 @@
   }
 </style>
 
-          <div class="col">
-            <a href="#" target="_blank">
-              <div class="card text-bg-dark">
-                <img
-                  src="assets/img/forest1.jpg"
-                  class="card-img img-fluid object-fit-cover"
-                  alt="..."
-                  style="height: 250px !important; filter: brightness(0.4)"
-                />
-                <div class="card-img-overlay">
-                  <h5 class="card-title fw-bold">PANDUAN SARJANA</h5>
-                  <p class="card-text">
-                    Menyajikan Buku Panduan Sarjana Mahasiswa Edisi ke-4
-                  </p>
-                  <p class="card-text"><small>‎ </small></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col">
-            <a href="#" target="_blank">
-              <div class="card text-bg-dark">
-                <img
-                  src="assets/img/forest1.jpg"
-                  class="card-img img-fluid object-fit-cover"
-                  alt="..."
-                  style="height: 250px !important; filter: brightness(0.4)"
-                />
-                <div class="card-img-overlay">
-                  <h5 class="card-title fw-bold">PENGADUAN</h5>
-                  <p class="card-text">
-                    Memberi Fasilitas Pengaduan untuk kesejahteraan Mahasiswa FAHUTAN
-                  </p>
-                  <p class="card-text"><small>‎ </small></p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
     
     <section
       class="container-fluid bg-secondary"
