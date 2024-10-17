@@ -13,39 +13,7 @@
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
         }
     </style>
-    
-  <style>
-  /* Gaya untuk teks agar tetap seperti semula */
-  .card-title, .card-text {
-    color: black;         /* Pastikan teks tetap hitam */
-    font-weight: inherit; /* Ikuti gaya font aslinya */
-  }
-
-  /* Style untuk tombol download */
-  .download-btn {
-    display: inline-block;
-    margin-top: 20px;      /* Jarak antara teks dan tombol */
-    padding: 15px 30px;    /* Ukuran tombol */
-    border-radius: 50px;   /* Membuat tombol menjadi oval */
-    font-size: 16px;       /* Ukuran teks tombol */
-    text-align: center;     /* Pusatkan teks dalam tombol */
-    background-color: #28a745; /* Warna hijau */
-    color: white;          /* Warna teks putih */
-    text-decoration: none;  /* Hilangkan garis bawah pada teks */
-    font-weight: bold;     /* Membuat teks pada tombol bold */
-  }
-
-  .download-btn:hover {
-    background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
-  }
-
-  /* Pastikan elemen di dalam card-img-overlay tidak mengubah layout kolom lainnya */
-  .card-img-overlay {
-    display: flex;
-    flex-direction: column; /* Pastikan elemen diatur dalam kolom */
-    align-items: center;    /* Pusatkan semua elemen di tengah */
-  }
-</style>
+  
     
   </head>
   <body>
@@ -359,8 +327,8 @@
                   alt="..."
                   style="height: 250px !important; filter: brightness(0.4)"
                 />
-                <div class="card-img-overlay text-center">
-  <h5 class="card-title fw-bold">KONVERSI SKS</h5>
+                <div class="card-img-overlay">
+  <h5 class="card-title fw-bold">KONVERSI SKS</h5> <!-- Teks tetap bold -->
   <p class="card-text">
     Menyajikan Tata Cara Konversi SKS. 
   </p>
@@ -371,6 +339,37 @@
     <a href="file-konversi-sks.pdf" download class="btn download-btn">Download</a>
   </div>
 </div>
+
+<style>
+  /* Gaya untuk memastikan teks tetap tidak berubah */
+  .card-title, .card-text {
+    color: black;         /* Pastikan teks tetap hitam */
+    font-weight: inherit; /* Mengikuti gaya font aslinya */
+  }
+
+  /* Style untuk tombol download */
+  .download-btn {
+    display: inline-block;
+    margin-top: 20px;      /* Jarak antara teks dan tombol */
+    padding: 15px 30px;    /* Ukuran tombol */
+    border-radius: 50px;   /* Membuat tombol menjadi oval */
+    font-size: 16px;       /* Ukuran teks tombol */
+    text-align: center;     /* Pusatkan teks dalam tombol */
+    background-color: #28a745; /* Warna hijau */
+    color: white;          /* Warna teks putih */
+    text-decoration: none;  /* Hilangkan garis bawah pada teks */
+    font-weight: bold;     /* Membuat teks pada tombol bold */
+  }
+
+  .download-btn:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat di-hover */
+  }
+
+  /* Pusatkan tombol download */
+  .text-center {
+    text-align: center; /* Pusatkan tombol download */
+  }
+</style>
 
           <div class="col">
             <a href="#" target="_blank">
