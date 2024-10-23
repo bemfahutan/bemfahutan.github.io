@@ -13,6 +13,13 @@
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
         }
     </style>
+    
+    <!-- Menambahkan CSS untuk justify -->
+<style>
+  .justify-text {
+    text-align: justify;
+  }
+</style>
   
   </head>
   <body>
@@ -171,7 +178,12 @@
           </div>
         </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
-         <div class="col">
+         Untuk membuat teks "Lokasi", "Tanggal", dan "Waktu" **justify kiri-kanan** tanpa mempengaruhi teks atau elemen lainnya, kita bisa menggunakan properti CSS `text-align: justify`. Namun, agar efek justify hanya berlaku pada teks tersebut, kita dapat menambahkan class atau ID khusus di elemen `<p>` yang berisi teks tersebut.
+
+Berikut adalah kodingan yang sudah diperbarui:
+
+```html
+<div class="col">
   <div class="card text-bg-dark">
     <img
       src="assets/img/forest1.jpg"
@@ -181,7 +193,8 @@
     />
     <div class="card-img-overlay">
       <h5 class="card-title text-center fw-bold">Sarapan Sehat</h5>
-      <p class="card-text text-center">
+      <!-- Menambahkan class 'justify-text' untuk mengatur teks justify -->
+      <p class="card-text justify-text">
         <strong>Lokasi:</strong> Node X, Departemen KSHE<br>
         <strong>Tanggal:</strong> Jumat, 25 Oktober 2025<br>
         <strong>Waktu:</strong> 07.00-08.00 WIB
