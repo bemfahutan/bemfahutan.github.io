@@ -14,10 +14,15 @@
         }
     </style>
     
-    <!-- Menambahkan CSS untuk justify -->
-<style>
+   <style>
   .justify-text {
     text-align: justify;
+  }
+  
+  .label {
+    display: inline-block;
+    min-width: 80px; /* Sesuaikan ukuran agar titik dua segaris */
+    font-weight: bold;
   }
 </style>
   
@@ -179,7 +184,7 @@
         </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
     <div class="col">
-    <div class="card text-bg-dark">
+  <div class="card text-bg-dark">
     <img
       src="assets/img/forest1.jpg"
       class="card-img img-fluid object-fit-cover"
@@ -188,11 +193,10 @@
     />
     <div class="card-img-overlay">
       <h5 class="card-title text-center fw-bold">Sarapan Sehat</h5>
-      <!-- Menambahkan class 'justify-text' untuk mengatur teks justify -->
       <p class="card-text justify-text">
-        <strong>Lokasi:</strong> Node X, Departemen KSHE<br>
-        <strong>Tanggal:</strong> Jumat, 25 Oktober 2025<br>
-        <strong>Waktu:</strong> 07.00-08.00 WIB
+        <span class="label">Lokasi:</span> Node X, Departemen KSHE<br>
+        <span class="label">Tanggal:</span> Jumat, 25 Oktober 2025<br>
+        <span class="label">Waktu:</span> 07.00-08.00 WIB
       </p>
       <p class="card-text text-center">
         <small>Kami tunggu kehadiran kalian</small>
