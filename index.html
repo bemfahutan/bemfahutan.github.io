@@ -19,33 +19,6 @@
     text-align: justify;
   }
 </style>
-
-   <style>
-  /* Mengatur posisi gambar agar tidak terpengaruh */
-  .carousel-item img {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Default pengaturan teks, opacity awal adalah 0 */
-  .carousel-item .carousel-text {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-
-  /* Saat slide aktif, teks akan muncul dengan animasi */
-  .carousel-item.active .carousel-text {
-    opacity: 1;
-  }
-
-  /* Jangan menggunakan position absolute pada teks untuk menjaga tata letak */
-  .carousel-caption {
-    position: relative; /* Biarkan tetap relative untuk tidak mempengaruhi elemen lain */
-    top: auto; /* Buang top yang di-set ke 0 agar tidak merusak tata letak */
-    transform: none; /* Buang transform agar tidak menggeser elemen */
-    z-index: 2;
-  }
-</style>
   
   </head>
   <body>
@@ -92,28 +65,27 @@
         ></button>
       </div>
      <div class="carousel-inner h-100">
-    <div class="carousel-item active h-100">
-      <img
-        src="assets/img/logobem.png"
-        class="img-fluid object-fit-cover h-100 w-100"
-        alt="..."
-        style="filter: brightness(0.5);"
-      />
-      <div
-        class="carousel-caption d-flex flex-column justify-content-center text-md-start"
-        style="top: 0;"
-      >
-        <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">BADAN EKSEKUTIF MAHASISWA</h1>
-        <h2 class="fw-bold text-center carousel-text" style="color: #cccccc;">FAKULTAS KEHUTANAN DAN LINGKUNGAN</h2>
-        <p class="text-center fw-bold carousel-text" style="color: #cccccc; margin-bottom: 48px;">
-          Bergerak sebagai wadah bagi KM Fahutan dalam menjalankan fungsi administrasi, pelayanan, pelatihan dan pengembangan untuk menjamin kebermanfaatan dan kesejahteraan bagi mahasiswa Fahutan
-        </p>
-        <p class="text-center fw-bold carousel-text" style="color: #cccccc;">KABINET RIMBANAWA</p>
-      </div>
-    </div>
+        <div class="carousel-item active h-100">
+          <img
+            src="assets/img/logobem.png"
+            class="img-fluid object-fit-cover h-100 w-100"
+            alt="..."
+            style="filter: brightness(0.5)"
+          />
+          <div
+            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
+            style="top: 0"
+          >
+            <h1 class="fw-bold text-center" style="color: #cccccc;"> BADAN EKSEKUTIF MAHASISWA</h1>
+             <h2 class="fw-bold text-center" style="color: #cccccc;">FAKULTAS KEHUTANAN DAN LINGKUNGAN</h2>
+            <p class="text-center fw-bold" style="color: #cccccc; margin-bottom: 48px;">
+              Bergerak sebagai wadah bagi KM Fahutan dalam menjalankan fungsi administrasi, pelayanan, pelatihan dan pengembangan untuk menjamin kebermanfaatan dan kesejahteraan bagi mahasiswa Fahutan
+            </p>
+           <p class="text-center fw-bold" style="color: #cccccc;">KABINET RIMBANAWA</p>
+          </div>
+        </div>
        
         <div class="carousel-item h-100">
-        <div class="carousel-item active h-100">
   <img
     src="assets/img/helpcenter(1).jpeg"
     class="img-fluid object-fit-cover h-100 w-100"
@@ -130,7 +102,6 @@
         </div>
  
         <div class="carousel-item h-100">
-          <div class="carousel-item active h-100">
           <img
             src="assets/img/Adkesmah.PNG"
             class="img-fluid object-fit-cover h-100 w-100"
