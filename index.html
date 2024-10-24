@@ -32,17 +32,18 @@
     opacity: 1;
 }
 
+/* Wadah untuk teks dengan fleksibilitas */
+.typewriter-container {
+    display: flex;
+    flex-direction: column; /* Mengatur kolom untuk membuat garis baru */
+    overflow: hidden; /* Menghindari teks keluar dari slide */
+}
+
 /* Animasi mengetik untuk paragraf di bawah judul */
 .typewriter {
-    overflow: hidden; /* Menghindari teks keluar dari slide */
     white-space: nowrap; /* Menghindari teks pecah ke baris baru */
-    margin: 0 auto; /* Untuk memusatkan teks */
     letter-spacing: 0.1em; /* Memberi sedikit spasi antara huruf */
-    display: inline-block; /* Pastikan animasi terjadi dalam satu garis */
-    max-width: 100%; /* Membatasi lebar agar teks tetap di dalam slide */
-    box-sizing: border-box; /* Menghitung lebar teks sesuai konten */
     animation: typing 4s steps(50, end) 1s, blink-caret 0.75s step-end infinite 1s;
-    /* Tambahkan 1 detik jeda dengan '1s' setelah animasi typing dan blink */
 }
 
 /* Efek mengetik (animasi) */
