@@ -21,7 +21,7 @@
 </style>
 
     <style>
-      /* Awalnya teks disembunyikan */
+    /* Awalnya teks disembunyikan */
 .carousel-item .carousel-text {
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -42,26 +42,35 @@
     max-width: 100%; /* Membatasi lebar agar teks tetap di dalam slide */
     box-sizing: border-box; /* Menghitung lebar teks sesuai konten */
     border-right: 2px solid #cccccc; /* Simulasi kursor */
-    animation: typing 6s steps(100, end) 1s, blink-caret 0.75s step-end infinite 1s;
+    animation: typing 6s steps(100, end) 1s forwards, blink-caret 0.75s step-end infinite 1s;
 }
 
 /* Efek mengetik (animasi) */
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 100%; 
+        border-right: 2px solid transparent; /* Menghilangkan garis setelah mengetik */
+    }
 }
 
 /* Efek kedip kursor */
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #cccccc; }
+    from, to { 
+        border-color: transparent; 
+    }
+    50% { 
+        border-color: #cccccc; 
+    }
 }
 
 /* Mengatur tinggi baris untuk memastikan teks tidak terpotong */
 .typewriter p {
     line-height: 1.5; /* Mengatur tinggi baris untuk spasi antar baris */
 }
-</style>
+  </style>
   
   </head>
   <body>
