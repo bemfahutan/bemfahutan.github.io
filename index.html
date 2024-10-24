@@ -34,12 +34,15 @@
 
 /* Animasi mengetik untuk paragraf di bawah judul */
 .typewriter {
-    overflow: hidden; /* Ensures that the text is hidden until it appears */
-    border-right: 0.15em solid #cccccc; /* Creates a cursor-like effect */
-    white-space: nowrap; /* Keeps text on one line */
-    margin: 0 auto; /* Centers the text */
-    letter-spacing: 0.1em; /* Adds a bit of spacing between letters */
-    animation: typing 4s steps(50, end), blink-caret 0.75s step-end infinite;
+    overflow: hidden; /* Menghindari teks keluar dari slide */
+    white-space: nowrap; /* Menghindari teks pecah ke baris baru */
+    margin: 0 auto; /* Untuk memusatkan teks */
+    letter-spacing: 0.1em; /* Memberi sedikit spasi antara huruf */
+    display: inline-block; /* Pastikan animasi terjadi dalam satu garis */
+    max-width: 100%; /* Membatasi lebar agar teks tetap di dalam slide */
+    box-sizing: border-box; /* Menghitung lebar teks sesuai konten */
+    animation: typing 4s steps(50, end) 1s, blink-caret 0.75s step-end infinite 1s;
+    /* Tambahkan 1 detik jeda dengan '1s' setelah animasi typing dan blink */
 }
 
 /* Efek mengetik (animasi) */
