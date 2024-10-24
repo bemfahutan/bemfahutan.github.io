@@ -20,55 +20,44 @@
   }
 </style>
 
-    <style>
+   <style>
     /* Awalnya teks disembunyikan */
-.carousel-item .carousel-text {
+.carousel-item .typewriter {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    position: relative;
+    display: inline-block;
+    white-space: pre-wrap; /* Mengatur teks ke line baru jika tidak cukup */
+    overflow: hidden;
+    border-right: 2px solid #cccccc; /* Cursor typewriter */
+    animation: none;
 }
 
-/* Saat slide aktif, teks muncul dengan animasi */
-.carousel-item.active .carousel-text {
-    opacity: 1;
-}
-
-/* Animasi mengetik untuk paragraf di bawah judul */
-.typewriter {
-    overflow: hidden; /* Menghindari teks keluar dari slide */
-    white-space: normal; /* Agar teks dapat pecah ke baris baru */
-    margin: 0 auto; /* Untuk memusatkan teks */
-    letter-spacing: 0.1em; /* Memberi sedikit spasi antara huruf */
-    display: inline-block; /* Pastikan animasi terjadi dalam satu garis */
-    max-width: 100%; /* Membatasi lebar agar teks tetap di dalam slide */
-    box-sizing: border-box; /* Menghitung lebar teks sesuai konten */
-    border-right: 2px solid #cccccc; /* Simulasi kursor */
-    animation: typing 6s steps(100, end) 1s forwards, blink-caret 0.75s step-end infinite 1s;
-}
-
-/* Efek mengetik (animasi) */
+/* Efek mengetik */
 @keyframes typing {
-    from { 
-        width: 0; 
+    from {
+        width: 0;
     }
-    to { 
-        width: 100%; 
-        border-right: 2px solid transparent; /* Menghilangkan garis setelah mengetik */
-    }
-}
-
-/* Efek kedip kursor */
-@keyframes blink-caret {
-    from, to { 
-        border-color: transparent; 
-    }
-    50% { 
-        border-color: #cccccc; 
+    to {
+        width: 100%;
     }
 }
 
-/* Mengatur tinggi baris untuk memastikan teks tidak terpotong */
-.typewriter p {
-    line-height: 1.5; /* Mengatur tinggi baris untuk spasi antar baris */
+/* Efek blink untuk cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Saat slide aktif, teks muncul dan mulai mengetik */
+.carousel-item.active .typewriter {
+    opacity: 1;
+    animation: typing 5s steps(100) 1s forwards, blink 0.7s step-end infinite;
+}
+
+/* Hilangkan cursor setelah selesai mengetik */
+.carousel-item.active .typewriter.completed::after {
+    content: none;
 }
   </style>
   
@@ -124,14 +113,11 @@
             alt="..."
             style="filter: brightness(0.5)"
         />
-        <div
-            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
-            style="top: 0"
-        >
+        <div class="carousel-caption d-flex flex-column justify-content-center text-md-start" style="top: 0">
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">BADAN EKSEKUTIF MAHASISWA</h1>
             <h2 class="fw-bold text-center carousel-text" style="color: #cccccc;">FAKULTAS KEHUTANAN DAN LINGKUNGAN</h2>
-            <p class="text-center fw-bold typewriter" style="color: #cccccc; margin-bottom: 48px;">
-                Bergerak sebagai wadah bagi KM Fahutan dalam menjalankan fungsi administrasi, pelayanan, pelatihan, dan pengembangan untuk menjamin kebermanfaatan dan kesejahteraan bagi mahasiswa Fahutan
+            <p class="text-center fw-bold carousel-text" style="color: #cccccc; margin-bottom: 48px;">
+                <span class="typewriter" data-text="Bergerak sebagai wadah bagi KM Fahutan dalam menjalankan fungsi administrasi, pelayanan, pelatihan, dan pengembangan untuk menjamin kebermanfaatan dan kesejahteraan bagi mahasiswa Fahutan"></span>
             </p>
             <p class="text-center fw-bold carousel-text" style="color: #cccccc;">KABINET RIMBANAWA</p>
         </div>
@@ -144,13 +130,10 @@
             alt="..."
             style="filter: brightness(0.5)"
         />
-        <div
-            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
-            style="top: 0"
-        >
+        <div class="carousel-caption d-flex flex-column justify-content-center text-md-start" style="top: 0">
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">HELP CENTER</h1>
-            <p class="text-center fw-bold typewriter" style="color: #cccccc;">
-                Help Center adalah sebuah laman website BEM Fahutan yang berfungsi sebagai penyediaan informasi, pelayanan, dan pengaduan untuk menjamin kesejahteraan mahasiswa Fahutan
+            <p class="text-center fw-bold carousel-text" style="color: #cccccc;">
+                <span class="typewriter" data-text="Help Center adalah sebuah laman website BEM Fahutan yang berfungsi sebagai penyediaan informasi, pelayanan, dan pengaduan untuk menjamin kesejahteraan mahasiswa Fahutan"></span>
             </p>
         </div>
     </div>
@@ -162,13 +145,10 @@
             alt="..."
             style="filter: brightness(0.5)"
         />
-        <div
-            class="carousel-caption d-flex flex-column justify-content-center text-md-start"
-            style="top: 0"
-        >
+        <div class="carousel-caption d-flex flex-column justify-content-center text-md-start" style="top: 0">
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">DEPARTEMEN ADVOKASI KESEJAHTERAAN MAHASISWA</h1>
-            <p class="text-center fw-bold typewriter" style="color: #cccccc; margin-bottom: 48px;">
-                Departemen Advokasi Kesejahteraan Mahasiswa (Adkesmah) adalah departemen yang berfokus pada tujuan advokasi dan pelayanan KM FAHUTAN IPB untuk menjamin kesejahteraan bagi seluruh mahasiswa Fahutan
+            <p class="text-center fw-bold carousel-text" style="color: #cccccc; margin-bottom: 48px;">
+                <span class="typewriter" data-text="Departemen Advokasi Kesejahteraan Mahasiswa (Adkesmah) adalah departemen yang berfokus pada tujuan advokasi dan pelayanan KM FAHUTAN IPB untuk menjamin kesejahteraan bagi seluruh mahasiswa Fahutan"></span>
             </p>
             <p class="text-center fw-bold carousel-text" style="color: #cccccc;">-ADKESMIAWWW-</p>
         </div>
