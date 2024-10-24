@@ -20,44 +20,35 @@
   }
 </style>
 
-  <style>
-  /* Awalnya teks disembunyikan */
+    <style>
+      /* Awalnya teks disembunyikan */
 .carousel-item .carousel-text {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
 
-/* Saat slide aktif, teks akan muncul dengan animasi */
+/* Saat slide aktif, teks muncul dengan animasi */
 .carousel-item.active .carousel-text {
     opacity: 1;
 }
 
-/* Wadah untuk teks dengan fleksibilitas */
-.typewriter-container {
-    display: flex;
-    flex-direction: column; /* Mengatur kolom untuk membuat garis baru */
-    overflow: hidden; /* Menghindari teks keluar dari slide */
-}
-
 /* Animasi mengetik untuk paragraf di bawah judul */
 .typewriter {
-    white-space: nowrap; /* Menghindari teks pecah ke baris baru */
+    overflow: hidden; /* Menghindari teks keluar dari slide */
+    white-space: normal; /* Agar teks dapat pecah ke baris baru */
+    margin: 0 auto; /* Untuk memusatkan teks */
     letter-spacing: 0.1em; /* Memberi sedikit spasi antara huruf */
-    visibility: hidden; /* Teks tidak terlihat di awal */
-    overflow: hidden; /* Menghindari teks keluar dari wadah */
-    width: 0; /* Lebar awal diatur ke 0 */
-    animation: typing 4s steps(50, end) 1s forwards, blink-caret 0.75s step-end infinite 1s;
+    display: inline-block; /* Pastikan animasi terjadi dalam satu garis */
+    max-width: 100%; /* Membatasi lebar agar teks tetap di dalam slide */
+    box-sizing: border-box; /* Menghitung lebar teks sesuai konten */
+    border-right: 2px solid #cccccc; /* Simulasi kursor */
+    animation: typing 6s steps(100, end) 1s, blink-caret 0.75s step-end infinite 1s;
 }
 
 /* Efek mengetik (animasi) */
 @keyframes typing {
-    0% {
-        visibility: visible; /* Teks terlihat saat mulai mengetik */
-        width: 0; /* Lebar awal diatur ke 0 */
-    }
-    100% {
-        width: 100%; /* Lebar akhir diatur ke 100% */
-    }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 /* Efek kedip kursor */
@@ -65,9 +56,12 @@
     from, to { border-color: transparent; }
     50% { border-color: #cccccc; }
 }
+
+/* Mengatur tinggi baris untuk memastikan teks tidak terpotong */
+.typewriter p {
+    line-height: 1.5; /* Mengatur tinggi baris untuk spasi antar baris */
+}
 </style>
-
-
   
   </head>
   <body>
@@ -119,7 +113,7 @@
             src="assets/img/logobem.png"
             class="img-fluid object-fit-cover h-100 w-100"
             alt="..."
-            style="filter: brightness(0.5);"
+            style="filter: brightness(0.5)"
         />
         <div
             class="carousel-caption d-flex flex-column justify-content-center text-md-start"
@@ -127,7 +121,6 @@
         >
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">BADAN EKSEKUTIF MAHASISWA</h1>
             <h2 class="fw-bold text-center carousel-text" style="color: #cccccc;">FAKULTAS KEHUTANAN DAN LINGKUNGAN</h2>
-            <div class="typewriter-container">
             <p class="text-center fw-bold typewriter" style="color: #cccccc; margin-bottom: 48px;">
                 Bergerak sebagai wadah bagi KM Fahutan dalam menjalankan fungsi administrasi, pelayanan, pelatihan, dan pengembangan untuk menjamin kebermanfaatan dan kesejahteraan bagi mahasiswa Fahutan
             </p>
@@ -140,14 +133,13 @@
             src="assets/img/helpcenter(1).jpeg"
             class="img-fluid object-fit-cover h-100 w-100"
             alt="..."
-            style="filter: brightness(0.5);"
+            style="filter: brightness(0.5)"
         />
         <div
             class="carousel-caption d-flex flex-column justify-content-center text-md-start"
             style="top: 0"
         >
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">HELP CENTER</h1>
-            <div class="typewriter-container">
             <p class="text-center fw-bold typewriter" style="color: #cccccc;">
                 Help Center adalah sebuah laman website BEM Fahutan yang berfungsi sebagai penyediaan informasi, pelayanan, dan pengaduan untuk menjamin kesejahteraan mahasiswa Fahutan
             </p>
@@ -159,14 +151,13 @@
             src="assets/img/Adkesmah.PNG"
             class="img-fluid object-fit-cover h-100 w-100"
             alt="..."
-            style="filter: brightness(0.5);"
+            style="filter: brightness(0.5)"
         />
         <div
             class="carousel-caption d-flex flex-column justify-content-center text-md-start"
             style="top: 0"
         >
             <h1 class="fw-bold text-center carousel-text" style="color: #cccccc;">DEPARTEMEN ADVOKASI KESEJAHTERAAN MAHASISWA</h1>
-            <div class="typewriter-container">
             <p class="text-center fw-bold typewriter" style="color: #cccccc; margin-bottom: 48px;">
                 Departemen Advokasi Kesejahteraan Mahasiswa (Adkesmah) adalah departemen yang berfokus pada tujuan advokasi dan pelayanan KM FAHUTAN IPB untuk menjamin kesejahteraan bagi seluruh mahasiswa Fahutan
             </p>
@@ -175,7 +166,6 @@
     </div>
 </div>
 
-    
       <button
         class="carousel-control-prev"
         type="button"
