@@ -21,23 +21,15 @@
 </style>
 
     <style>
-  .carousel-item:not(.active) .carousel-text {
-    display: none;
-  }
-
-  .carousel-item.active .carousel-text {
-    display: block;
+  /* Hanya mempengaruhi teks di slide aktif */
+  .carousel-item .carousel-text {
     opacity: 0;
-    animation: fadeIn 1s forwards; /* 1 second animation */
+    transition: opacity 1s ease-in-out;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  /* Saat slide aktif, teks akan muncul dengan animasi */
+  .carousel-item.active .carousel-text {
+    opacity: 1;
   }
 </style>
   
@@ -105,6 +97,7 @@
         <p class="text-center fw-bold carousel-text" style="color: #cccccc;">KABINET RIMBANAWA</p>
       </div>
     </div>
+    <!-- Add other carousel items here -->
 </div>
        
         <div class="carousel-item h-100">
