@@ -22,6 +22,32 @@
 </style>
 
     <style>
+.news-item {
+    border: 2px solid #f3f3f3; /* Membuat kotak terlihat */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Lebar penuh agar sesuai dengan judul */
+}
+
+.news-title-container {
+    flex-grow: 1; /* Membuat ruang untuk judul agar bergerak ke kiri */
+    margin-left: 15px; /* Jarak antara gambar dan judul */
+}
+
+.news-title {
+    font-size: 28px; /* Ukuran font judul lebih besar */
+    color: #c1172f; /* Warna judul */
+    transition: color 0.3s;
+    text-align: left; /* Judul di sebelah kiri */
+}
+</style>
+
+    <style>
     /* Style untuk item berita di dalam section ini */
     .news-section .news-item {
         border: 2px solid #f3f3f3;
@@ -198,10 +224,10 @@
 
     <div style="height: 50px"></div>
 
-    <section
+    <section 
     class="pt-3" 
     style=
-        "padding-bottom: calc(1rem + 50px);
+        "padding-bottom: calc(1rem + 50px); 
         background-image: url(assets/contour1.svg); 
         background-repeat: no-repeat; 
         background-size: contain; 
@@ -223,11 +249,11 @@
                         src="assets/img/sarapansehat.jpeg"
                         alt="Gambar Sarapan Sehat"
                         class="news-img img-fluid me-3"
-                        style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;"
+                        style="width: 120px; height: 120px; object-fit: cover; border-radius: 5px;"
                     />
                     <!-- Judul berita -->
-                    <div>
-                        <a href="isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
+                    <div class="news-title-container">
+                        <a href="Isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none;">
                             Sarapan Sehat
                         </a>
                     </div>
