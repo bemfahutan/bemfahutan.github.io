@@ -164,7 +164,7 @@
     <div style="height: 50px"></div>
 
     <section
-    class="pt-3"
+    class="pt-3 news-section" <!-- Tambahkan class khusus -->
     style="
         padding-bottom: calc(1rem + 50px);
         background-image: url(assets/contour1.svg);
@@ -190,22 +190,58 @@
                         src="assets/img/sarapansehat.jpeg"
                         alt="Gambar Sarapan Sehat"
                         class="news-img img-fluid me-3"
-                        style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;"
+                        style="width: 120px; height: 120px; object-fit: cover; border-radius: 5px;" <!-- Ukuran gambar lebih besar -->
                     />
                     <!-- Judul berita -->
                     <div>
-                        <a href="Isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                        <a href="isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;"> <!-- Ukuran font judul lebih besar -->
                             Sarapan Sehat
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Card berita lainnya dapat ditambahkan di sini dengan format yang sama -->
+            <!-- Tambahkan card berita lainnya di sini dengan format yang sama -->
 
         </div>
     </div>
 </section>
+
+<style>
+    /* Style untuk item berita di dalam section ini */
+    .news-section .news-item {
+        border: 2px solid #f3f3f3;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Gaya untuk judul berita di dalam section ini */
+    .news-section .news-title {
+        font-size: 20px; /* Ukuran font judul lebih besar */
+        color: #c1172f;
+        font-weight: bold; /* Judul tebal */
+        transition: color 0.3s;
+    }
+
+    .news-section .news-title:hover {
+        color: #b10b1e;
+        text-decoration: underline;
+    }
+
+    /* Style untuk gambar di sebelah kiri di dalam section ini */
+    .news-section .news-img {
+        flex-shrink: 0;
+        margin-right: 15px; /* Jarak antara gambar dan teks */
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
 
     <div style="height: 50px"></div>
 
