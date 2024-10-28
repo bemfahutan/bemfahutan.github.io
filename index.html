@@ -23,30 +23,26 @@
 
     <style>
     .news-item {
-        border: 2px solid #f3f3f3; /* Membuat kotak terlihat */
-        padding: 15px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #ffffff;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        width: 100%; /* Lebar penuh agar sesuai dengan judul */
-        max-width: calc(100% - 30px); /* Sesuaikan dengan lebar garis di bawah "NEWS" */
-        margin-left: auto; /* Mengatur margin kiri dan kanan */
-        margin-right: auto; 
-      }
+    border: 2px solid #f3f3f3; /* Membuat kotak terlihat */
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
 
-  .news-title-container {
-        flex-grow: 1; /* Membuat ruang untuk judul agar bergerak ke kiri */
-        margin-left: 15px; /* Jarak antara gambar dan judul */
-      }
+.news-title-container {
+    flex-grow: 1; /* Membuat ruang untuk judul agar bergerak ke kiri */
+    margin-left: 15px; /* Jarak antara gambar dan judul */
+}
 
-  .news-title {
-        font-size: 28px; /* Ukuran font judul lebih besar */
-        color: #c1172f; /* Warna judul */
-        transition: color 0.3s;
-        text-align: left; /* Judul di sebelah kiri */
-      }
+.news-title {
+    font-size: 28px; /* Ukuran font judul lebih besar */
+    color: #c1172f; /* Warna judul */
+    transition: color 0.3s;
+    text-align: left; /* Judul di sebelah kiri */
+}
 </style>
 
     <style>
@@ -226,26 +222,16 @@
 
     <div style="height: 50px"></div>
 
-    <section 
-    class="pt-3" 
-    style=
-        "padding-bottom: calc(1rem + 50px); 
-        background-image: url(assets/contour1.svg); 
-        background-repeat: no-repeat; 
-        background-size: contain; 
-        background-position: left top;
-      "
-      >
-   <div class="container py-3" id="berita">
+    <section class="pt-3" style="padding-bottom: calc(1rem + 50px); background-image: url(assets/contour1.svg); background-repeat: no-repeat; background-size: contain; background-position: left top;">
+    <div class="container py-3" id="berita">
         <div class="row">
             <div class="col text-center">
                 <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">NEWS</h1>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
-            <!-- Card Berita -->
-            <div class="col-12"> <!-- Mengatur lebar kolom agar penuh -->
-                <div class="news-item d-flex" style="max-width: 100%; border-radius: 10px;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6"> <!-- Mengatur lebar kolom agar sesuai dengan garis -->
+                <div class="news-item d-flex" style="border-radius: 10px;">
                     <!-- Gambar di sebelah kiri -->
                     <img
                         src="assets/img/sarapansehat.jpeg"
@@ -255,7 +241,7 @@
                     />
                     <!-- Judul berita -->
                     <div class="news-title-container">
-                        <a href="isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                        <a href="Isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none;">
                             Sarapan Sehat
                         </a>
                     </div>
