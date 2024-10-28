@@ -198,45 +198,42 @@
 
     <div style="height: 50px"></div>
 
-    <!-- Section Berita -->
-<section
-    class="pt-3 news-section"
-    style="
-        padding-bottom: calc(1rem + 50px); 
+    <section
+    class="pt-3" 
+    style=
+        "padding-bottom: calc(1rem + 50px);
         background-image: url(assets/contour1.svg); 
         background-repeat: no-repeat; 
         background-size: contain; 
         background-position: left top;
-    "
->
+      "
+      >
     <div class="container py-3" id="berita">
         <div class="row">
             <div class="col text-center">
-                <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">
-                    NEWS
-                </h1>
+                <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">NEWS</h1>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 justify-content-center">
             <!-- Card Berita -->
-            <div class="col">
+            <div class="col-12"> <!-- Mengatur lebar kolom agar penuh -->
                 <div class="news-item d-flex">
                     <!-- Gambar di sebelah kiri -->
                     <img
                         src="assets/img/sarapansehat.jpeg"
                         alt="Gambar Sarapan Sehat"
                         class="news-img img-fluid me-3"
-                        style="width: 120px; height: 120px; object-fit: cover; border-radius: 5px;" 
+                        style="width: 80px; height: 80px; object-fit: cover; border-radius: 5px;"
                     />
-                    <!-- Judul berita dengan link ke halaman detail -->
+                    <!-- Judul berita -->
                     <div>
-                        <a href="Isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
+                        <a href="isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
                             Sarapan Sehat
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Tambahkan card berita lainnya di sini dengan format yang sama -->
+            <!-- Tambahkan card berita lainnya di sini -->
         </div>
     </div>
 </section>
