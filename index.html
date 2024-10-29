@@ -30,15 +30,15 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    width: 100%; /* Mengatur lebar penuh kontainer */
 }
 
 .news-title-container {
-    flex-grow: 1; /* Membuat ruang untuk judul agar bergerak ke kiri */
-    margin-left: 15px; /* Jarak antara gambar dan judul */
+    margin-left: 20px; /* Jarak antara gambar dan judul */
 }
 
 .news-title {
-    font-size: 28px; /* Ukuran font judul lebih besar */
+    font-size: 30px; /* Ukuran font judul lebih besar */
     color: #c1172f; /* Warna judul */
     transition: color 0.3s;
     text-align: left; /* Judul di sebelah kiri */
@@ -230,18 +230,18 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6"> <!-- Mengatur lebar kolom agar sesuai dengan garis -->
-                <div class="news-item d-flex" style="border-radius: 10px;">
+            <div class="col-12"> <!-- Membuat lebar penuh agar sesuai garis -->
+                <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
                     <!-- Gambar di sebelah kiri -->
                     <img
                         src="assets/img/sarapansehat.jpeg"
                         alt="Gambar Sarapan Sehat"
                         class="news-img img-fluid me-3"
-                        style="width: 120px; height: 120px; object-fit: cover; border-radius: 5px;"
+                        style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;"
                     />
                     <!-- Judul berita -->
                     <div class="news-title-container">
-                        <a href="Isi-berita.html" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                        <a href="Isi-berita" class="news-title text-primary fw-bold" style="text-decoration: none;">
                             Sarapan Sehat
                         </a>
                     </div>
