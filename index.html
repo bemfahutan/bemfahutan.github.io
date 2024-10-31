@@ -81,10 +81,10 @@
 </style>
 
     <style>
+    /* Menambahkan batas tinggi untuk scroll */
     .scroll-container {
-        max-height: 600px; /* Atur tinggi maksimal untuk tampilan */
+        max-height: 600px; /* Ubah sesuai kebutuhan */
         overflow-y: auto; /* Aktifkan scroll vertikal */
-        padding-right: 10px; /* Tambahkan padding untuk scroll bar */
     }
 </style>
   
@@ -237,8 +237,10 @@
                 <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">NEWS</h1>
             </div>
         </div>
+        
         <!-- Container Scroll dengan batas 3 kolom -->
-        <div class="row justify-content-center scroll-container">
+        <div class="row justify-content-center scroll-container" id="news-container">
+            <!-- Contoh Berita 1 -->
             <div class="col-12" data-date="2024-10-25">
                 <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
                     <img src="assets/img/sarapansehat.jpeg" alt="Gambar Sarapan Sehat" class="news-img img-fluid me-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;" />
@@ -251,6 +253,7 @@
                 </div>
             </div>
 
+            <!-- Contoh Berita 2 -->
             <div class="col-12" data-date="2024-10-30">
                 <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
                     <img src="assets/img/forkesmah.jpg" alt="Gambar Forkesmah Fahutan 2024" class="news-img img-fluid me-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;" />
@@ -263,6 +266,32 @@
                 </div>
             </div>
 
+            <!-- Contoh Berita 3 -->
+            <div class="col-12" data-date="2024-10-20">
+                <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
+                    <img src="assets/img/forkesmah.jpg" alt="Gambar Forkesmah Fahutan 2024" class="news-img img-fluid me-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;" />
+                    <div class="news-title-container">
+                        <a href="Isi-berita2" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                            [Press Release] Forkesmah Fahutan 2024 #2
+                        </a>
+                        <p class="news-date">31 Oktober 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contoh Berita 4 -->
+            <div class="col-12" data-date="2024-11-01">
+                <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
+                    <img src="assets/img/forkesmah.jpg" alt="Gambar Forkesmah Fahutan 2024" class="news-img img-fluid me-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;" />
+                    <div class="news-title-container">
+                        <a href="Isi-berita2" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                            [Press Release] Forkesmah Fahutan 2024 #2
+                        </a>
+                        <p class="news-date">01 November 2024</p>
+                    </div>
+                </div>
+            </div>
+          
             <!-- Tambahkan berita tambahan dengan format yang sama -->
         </div>
     </div>
@@ -795,16 +824,20 @@
     </div>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const newsList = document.querySelector('.news-list');
-        const newsItems = Array.from(newsList.children);
+    // Fungsi untuk mengurutkan berita berdasarkan tanggal
+    document.addEventListener("DOMContentLoaded", function() {
+        const newsContainer = document.getElementById("news-container");
+        const newsItems = Array.from(newsContainer.children);
 
-        // Urutkan elemen berdasarkan data-date terbaru
-        newsItems.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+        newsItems.sort((a, b) => {
+            const dateA = new Date(a.getAttribute("data-date"));
+            const dateB = new Date(b.getAttribute("data-date"));
+            return dateB - dateA; // Urutkan dari yang terbaru
+        });
 
-        // Hapus elemen yang lama dan masukkan urutan baru
-        newsList.innerHTML = '';
-        newsItems.forEach(item => newsList.appendChild(item));
+        // Bersihkan kontainer dan tambahkan berita yang sudah diurutkan
+        newsContainer.innerHTML = "";
+        newsItems.forEach(item => newsContainer.appendChild(item));
     });
 </script>
     
