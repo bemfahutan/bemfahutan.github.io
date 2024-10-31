@@ -79,6 +79,25 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 </style>
+
+    <style>
+    .news-item {
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .news-title {
+        font-size: 20px;
+        color: #c1172f;
+    }
+
+    .news-title:hover {
+        text-decoration: underline;
+    }
+</style>
   
   </head>
   <body>
@@ -229,7 +248,10 @@
                 <h1 class="fw-bold text-primary border-bottom border-5 border-secondary py-2 mb-3">NEWS</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
+        
+        <!-- Container untuk daftar berita -->
+        <div class="row justify-content-center" id="news-container">
+            <!-- Card berita pertama, yang sudah ada -->
             <div class="col-12"> <!-- Membuat lebar penuh agar sesuai garis -->
                 <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
                     <!-- Gambar di sebelah kiri -->
@@ -241,35 +263,81 @@
                     />
                     <!-- Judul berita -->
                     <div class="news-title-container">
-                        <a href="Isi-berita" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                        <a href="Isi-berita" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
                             Sarapan Sehat
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- Tambahkan card berita lainnya di sini -->
-            <div class="row justify-content-center">
+
+          <!-- Container untuk daftar berita -->
+        <div class="row justify-content-center" id="news-container">
+            <!-- Card berita pertama, yang sudah ada -->
             <div class="col-12"> <!-- Membuat lebar penuh agar sesuai garis -->
                 <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
                     <!-- Gambar di sebelah kiri -->
                     <img
                         src="assets/img/forkesmah.jpg"
-                        alt="Gambar Forkesmah Fahutan 2024"
+                        alt="Gambar Sarapan Sehat"
                         class="news-img img-fluid me-3"
                         style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;"
                     />
                     <!-- Judul berita -->
                     <div class="news-title-container">
-                        <a href="Isi-berita2" class="news-title text-primary fw-bold" style="text-decoration: none;">
+                        <a href="Isi-berita2" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
                             [Press Release] Forkesmah Fahutan 2024 #2
                         </a>
                     </div>
                 </div>
             </div>
-          
+            <!-- Berita-berita baru akan ditambahkan di sini -->
         </div>
     </div>
 </section>
+
+<!-- Script untuk menambahkan berita terbaru di atas -->
+<script>
+    // Daftar berita baru yang akan ditambahkan ke halaman
+    const beritaBaru = [
+        {
+            title: "Berita Terbaru 1",
+            link: "Isi-berita-terbaru1.html",
+            image: "assets/img/berita1.jpeg",
+            date: "1 November 2024"
+        },
+        {
+            title: "Berita Terbaru 2",
+            link: "Isi-berita-terbaru2.html",
+            image: "assets/img/berita2.jpeg",
+            date: "28 Oktober 2024"
+        },
+        // Tambahkan objek berita baru di sini
+    ];
+
+    // Function untuk menampilkan berita terbaru di atas berita lama
+    function tampilkanBerita() {
+        const newsContainer = document.getElementById("news-container");
+        beritaBaru.forEach((berita) => {
+            const beritaElement = document.createElement("div");
+            beritaElement.classList.add("col-12");
+            beritaElement.innerHTML = `
+                <div class="news-item d-flex" style="border-radius: 10px; padding: 15px;">
+                    <img src="${berita.image}" alt="Gambar ${berita.title}" class="news-img img-fluid me-3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 5px;">
+                    <div>
+                        <a href="${berita.link}" class="news-title text-primary fw-bold" style="text-decoration: none; font-size: 20px;">
+                            ${berita.title}
+                        </a>
+                        <p class="news-date text-muted">${berita.date}</p>
+                    </div>
+                </div>
+            `;
+            newsContainer.prepend(beritaElement); // Menambahkan berita terbaru di atas
+        });
+    }
+
+    // Menampilkan berita ketika halaman dimuat
+    document.addEventListener("DOMContentLoaded", tampilkanBerita);
+</script>
 
     <div style="height: 50px"></div>
 
