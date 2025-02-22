@@ -7,6 +7,96 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="scripts/bootstrap.bundle.min.js" defer></script>
+
+      <script>
+    // JavaScript chat system
+    let isAdmin = localStorage.getItem("isAdmin") === "true";
+
+    document.addEventListener("DOMContentLoaded", loadMessages);
+
+    function toggleChat() {
+        let chatContainer = document.getElementById('chatContainer');
+        let chatToggle = document.getElementById('chatToggle');
+
+        if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+            chatContainer.style.display = "flex";
+            chatToggle.style.display = "none";
+        } else {
+            chatContainer.style.display = "none";
+            chatToggle.style.display = "block";
+        }
+    }
+
+    function sendMessage() {
+        let messageInput = document.getElementById('messageInput');
+        let chatbox = document.getElementById('chatbox');
+
+        let messageText = messageInput.value.trim();
+        if (messageText === "") return;
+
+        let message = {
+            sender: isAdmin ? "Admin" : "Anon",
+            text: messageText,
+            timestamp: new Date().toLocaleString()
+        };
+
+        saveMessage(message);
+        appendMessage(message);
+        messageInput.value = "";
+    }
+
+    function appendMessage(message) {
+        let chatbox = document.getElementById('chatbox');
+
+        let messageElement = document.createElement("div");
+        messageElement.textContent = `${message.sender}: ${message.text}`;
+        messageElement.style.padding = "8px";
+        messageElement.style.margin = "5px";
+        messageElement.style.borderRadius = "5px";
+        messageElement.style.alignSelf = "flex-end";
+        messageElement.style.fontSize = "14px";
+
+        if (message.sender === "Admin") {
+            messageElement.style.backgroundColor = "#4caf50";
+            messageElement.style.color = "white";
+        } else {
+            messageElement.style.backgroundColor = "#e0e0e0";
+        }
+
+        chatbox.appendChild(messageElement);
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function saveMessage(message) {
+        let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+        messages.push(message);
+        localStorage.setItem("chatMessages", JSON.stringify(messages));
+    }
+
+    function loadMessages() {
+        let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+        messages.forEach(appendMessage);
+    }
+
+    function loginAdmin() {
+        let password = prompt("Masukkan kode admin:");
+        if (password === "5mei2004") {
+            isAdmin = true;
+            localStorage.setItem("isAdmin", "true");
+            alert("Anda sekarang login sebagai Admin.");
+        } else {
+            alert("Kode salah!");
+        }
+    }
+
+    function logoutAdmin() {
+        isAdmin = false;
+        localStorage.removeItem("isAdmin");
+        alert("Anda telah logout dari mode Admin.");
+    }
+</script>
+
+      
     <title>BEM Fahutan 2024</title>
     <style>
         .text-shadow {
