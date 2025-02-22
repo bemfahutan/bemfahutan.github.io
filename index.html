@@ -87,6 +87,86 @@
         overflow-y: auto; /* Aktifkan scroll vertikal */
     }
 </style>
+
+    <style>
+    /* Pastikan tidak mengganggu tampilan lain */
+.chat-widget-toggle, .chat-widget-container, .chat-widget-header, .chat-widget-box, .chat-widget-input, .chat-widget-button {
+    all: unset; /* Menghapus semua gaya default agar tidak merusak tampilan website */
+}
+
+/* Tombol untuk membuka chat */
+.chat-widget-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: blue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* Container chat */
+.chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+}
+
+/* Header chat */
+.chat-widget-header {
+    display: flex;
+    justify-content: space-between;
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 16px;
+}
+
+/* Chat box */
+.chat-widget-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Input dan tombol */
+.chat-widget-input {
+    width: calc(100% - 20px);
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.chat-widget-button {
+    width: calc(100% - 20px);
+    margin: 5px;
+    padding: 8px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+  </style>
   
   </head>
   <body>
@@ -111,6 +191,20 @@
         </li>
       </ul>
     </nav>
+
+    <!-- Tombol untuk membuka chat -->
+<div id="chatToggle" class="chat-widget-toggle" onclick="toggleChat()">💬 Chat</div>
+
+<!-- Container chat -->
+<div id="chatContainer" class="chat-widget-container">
+    <div id="chatHeader" class="chat-widget-header">
+        <span>Chat Anonim</span>
+        <button onclick="toggleChat()">✖</button>
+    </div>
+    <div id="chatbox" class="chat-widget-box"></div>
+    <input type="text" id="messageInput" class="chat-widget-input" placeholder="Ketik pesan...">
+    <button id="sendBtn" class="chat-widget-button" onclick="sendMessage()">Kirim</button>
+</div>
 
     <div id="carouselExampleCaptions" class="carousel slide" style="height: 75vh">
       <div class="carousel-indicators">
